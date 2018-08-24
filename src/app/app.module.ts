@@ -4,35 +4,27 @@ import { NgModule } from '@angular/core';
 //Rutas
 import { APP_ROUTES } from './app.routes';
 
+//Modulos
+import { PagesModule } from './pages/pages.module';
 
+//Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { DashboarComponent } from './pages/dashboar/dashboar.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { Graficas1Component } from './pages/graficas1/graficas1.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
-import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
-import { BreadcrumbsComponent } from './shared/breadcrumbs/breadcrumbs.component';
-
+import { RegisterComponent } from './login/register.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    NopagefoundComponent,
-    DashboarComponent,
-    ProgressComponent,
-    Graficas1Component,
-    HeaderComponent,
-    SidebarComponent,
-    BreadcrumbsComponent
-  ],
-  imports: [
-    BrowserModule,
-    APP_ROUTES
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		LoginComponent,
+		RegisterComponent
+	],
+	imports: [
+		BrowserModule,
+		APP_ROUTES,
+		PagesModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
+
 export class AppModule { }
